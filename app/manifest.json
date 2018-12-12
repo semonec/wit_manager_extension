@@ -10,11 +10,19 @@
   },
 
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "*://*.witland.xyz/*"
   ],
 
   "background": {
     "scripts": ["background.js"]
-  }
+  },
 
+  "content_scripts": [
+    {
+      "matches": ["*://*.witland.xyz/*"],
+      "js": ["runner.js"]
+    }
+  ]
 }
