@@ -1,0 +1,13 @@
+body {
+  background: #eee;
+}
+
+body .mui--appbar-height {
+  height: 4rem;
+}
+
+.mui--appbar-height {
+  font-size: 1.25rem;
+  color: #ffffff;
+  padding-left: 15px;
+}
