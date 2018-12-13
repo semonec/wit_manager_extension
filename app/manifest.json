@@ -26,5 +26,10 @@
       "js": ["js/runner.js", "libs/jquery-3.3.1.min.js"]
     }
   ],
-  "options_page": "settings.html"
+  "options_page": "settings.html",
+  "icons": {
+    "16": "./img/icon.png",
+    "48": "./img/icon.png",
+    "128": "./img/icon.png"
+  }
 }
