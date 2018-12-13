@@ -1,0 +1,17 @@
+body {
+  background: #eee;
+}
+
+.demo-layout-waterfall .mdl-layout__header-row .mdl-navigation__link:last-of-type  {
+  padding-right: 0;
+}
+
+.wit-card-layout {
+  display: table-row;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.mui-panel {
+  margin: 20px;
+}

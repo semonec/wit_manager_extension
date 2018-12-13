@@ -4,32 +4,69 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- load MUI -->
-    <link href="css/mui.min.css" rel="stylesheet" type="text/css" /> 
-    <link href="css/common.css" rel="stylesheet" type="text/css" /> 
-    <script src="libs/jquery-3.3.1.min.js">  </script>
+    <!-- load MDL -->
+    <link rel="stylesheet" href="./css/material.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="./css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="./css/settings.css" rel="stylesheet" type="text/css" />
+    <script src="./libs/material.min.js"></script>
+    <script src="./libs/jquery-3.3.1.min.js">  </script>
   </head>
   <body>
-    <div class="mui-container-fluid">
-      <!-- Header Area -->
-      <div class="mui-appbar">
-        <table width="100%">
-          <tr style="vertical-align:middle;">
-            <td class="mui--appbar-height">위트랜드 헬퍼 설정</td>
-          </tr>
-        </table>
-      </div>
-      <br />
-      
-      
-      <!-- Contents Area -->
-      <div class="mui-panel">
-        <button id="wit-btn-send-msg-to-dev" class="mui-btn mui-btn--primary mui-btn--raised">개발자에게 쪽지</button>
-      </div>
+    <!-- Uses a header that contracts as the page scrolls down. -->
 
-      <div class="mui-panel">
-        <button class="mui-btn mui-btn--primary mui-btn--raised">적용</button>
+    
+    <div class="demo-layout-waterfall mdl-layout mdl-js-layout">
+      <header class="mdl-layout__header mdl-layout__header--waterfall">
+        <!-- Top row, always visible -->
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">위트랜드 헬퍼 설정</span>
+          <div class="mdl-layout-spacer"></div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                      mdl-textfield--floating-label mdl-textfield--align-right">
+            <label class="mdl-button mdl-js-button mdl-button--icon"
+                   for="waterfall-exp">
+              <i class="material-icons">search</i>
+            </label>
+            <div class="mdl-textfield__expandable-holder">
+              <input class="mdl-textfield__input" type="text" name="sample"
+                     id="waterfall-exp">
+            </div>
+          </div>
+        </div>
+        <!-- Bottom row, not visible on scroll -->
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">설정</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+          <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
       </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!-- Your content goes here -->
+          <div class="mui-panel">
+              <button id="wit-btn-send-msg-to-dev" class="mui-btn mui-btn--primary mui-btn--raised">개발자에게 쪽지</button>
+            </div>
+      
+            <div class="mui-panel">
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+                <span class="mdl-switch__label">글쓰기 확장기능</span>
+                <input type="checkbox" id="switch-1" class="mdl-switch__input" checked>
+              </label>
+            </div>
+      
+        </div>
+
+
+
+
+        </div>
+      </main>
     </div>
     <script src="js/settings.js">  </script>
   </body>

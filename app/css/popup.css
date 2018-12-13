@@ -1,0 +1,31 @@
+/* popup.html 을 위한 주석입니다 */
+html {
+  width: 220px;
+  height: auto;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.popup-icon {
+  background-image: url("../img/icon_52x52.png");
+  background-repeat: no-repeat;
+  margin: 0 auto 0px auto;
+  width: 52px;
+  height: 52px;
+}
+
+.popup-button {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
