@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "위트랜드 헬퍼",
   "description": "위트랜드 사용을 편하게 해주는 헬퍼 플러그인 입니다.",
-  "version": "0.1",
+  "version": "0.11",
 
   "browser_action": {
     "default_icon": "img/icon.png",
