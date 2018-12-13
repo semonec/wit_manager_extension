@@ -12,7 +12,8 @@
   "permissions": [
     "activeTab",
     "tabs",
-    "*://*.witland.xyz/*"
+    "*://*.witland.xyz/*",
+    "file:///*"
   ],
 
   "background": {
@@ -22,7 +23,13 @@
   "content_scripts": [
     {
       "matches": ["*://*.witland.xyz/*"],
-      "js": ["libs/jquery-3.3.1.min.js", "js/runner.js"]
+      "css": ["./css/runner.css", "./css/mui.min.css", "./css/materialize.min.css"],
+      "js": ["./libs/jquery-3.3.1.min.js",  "./libs/materialize.min.js", "./js/runner.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["*://*.witland.xyz/bbs/board.php?bo*"],
+      "js": ["./js/runner-board.js"]
     }
   ],
   "options_page": "settings.html",

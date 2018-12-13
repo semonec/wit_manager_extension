@@ -1,0 +1,62 @@
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.fixed-action-btn {
+  right: 80px !important;
+}
+/*
+.ext-floating { 
+  display: block;
+  position: fixed;
+  width: 40px;
+  bottom: 150px;
+  right: 40px;
+  z-index: 2;
+}
+*/
+
+.ext-floating-board {
+  display: inline-block;
+  
+}
+/*
+.at-go .go-btn span {
+  display: block; 
+  color:#fff; 
+  background: rgba(0,0,0,0.5); 
+  margin:5px 0px;
+  text-align: center;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px !important;
+  font-size: 19px;
+}
+@media (max-width: 768px) {
+  .at-go .go-btn {
+    bottom:0px;
+    right:5px;
+  }
+}
+*/
