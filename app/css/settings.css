@@ -15,3 +15,8 @@ body {
 .mui-panel {
   margin: 20px;
 }
+
+.wit-left-half, .wit-right-half {
+  float: left;
+  width: 50%;
+}

@@ -6,5 +6,4 @@ $("#wit-btn-send-msg-to-dev").click(function(){
     'left=100,top=100,width=620,height=500,scrollbars=1');
   new_win.focus();
 });
-
 //

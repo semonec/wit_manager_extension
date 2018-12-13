@@ -4,33 +4,44 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- load MUI -->
-    <link href="css/mui.min.css" rel="stylesheet" type="text/css" /> 
-    <link href="css/common.css" rel="stylesheet" type="text/css" /> 
-    <script src="libs/jquery-3.3.1.min.js">  </script>
+    <title>위트랜드 설정 페이지</title>
+    <link href="./img/icon_52x52.png" rel="shortcut icon"/>
+    <link href="./css/mui.css" rel="stylesheet" type="text/css" />
+    <link href="./css/settings.css" rel="stylesheet" type="text/css" />
+    <script src="./libs/mui.min.js"></script>
+    <script src="./libs/jquery-3.3.1.min.js"></script>
   </head>
   <body>
-    <div class="mui-container-fluid">
-      <!-- Header Area -->
-      <div class="mui-appbar">
-        <table width="100%">
-          <tr style="vertical-align:middle;">
-            <td class="mui--appbar-height">위트랜드 헬퍼 설정</td>
+    <header class="mui-appbar mui--z1">
+      <div class="mui-container">
+        <table>
+          <tr class="mui--appbar-height">
+            <td class="mui--text-title">위트랜드 설정 페이지</td>
           </tr>
         </table>
       </div>
-      <br />
-      
-      
-      <!-- Contents Area -->
-      <div class="mui-panel">
-        <button id="wit-btn-send-msg-to-dev" class="mui-btn mui-btn--primary mui-btn--raised">개발자에게 쪽지</button>
+    </header>
+    <div id="content-wrapper" class="mui--text-center">
+      <br>
+      <br>
+      <div class="mui-panel mui--text-left">
+        <!-- content -->
+        <div class="mui--text-subhead">일반</div>
+        <div class="wit-left-half">
+            <button id="wit-btn-send-msg-to-dev" class="mui-btn mui-btn--primary" >개발자에게 쪽지보내기</button>
+        </div>
+        <div class="wit-right-half mui--text-right">
+            <button id="wit-btn-send-msg-to-dev" class="mui-btn mui-btn--danger">초기화</button>
+        </div>
       </div>
-
-      <div class="mui-panel">
-        <button class="mui-btn mui-btn--primary mui-btn--raised">적용</button>
-      </div>
+      <br>
+      <br>
     </div>
-    <script src="js/settings.js">  </script>
+    <footer>
+      <div class="mui-container mui--text-center">
+        Made by 코끼리는뿌우@witland.xyz
+      </div>
+    </footer>
+    <script src="./js/settings.js"></script>
   </body>
 </html>
