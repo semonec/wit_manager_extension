@@ -7,8 +7,11 @@
     <title>위트랜드 설정 페이지</title>
     <link href="./img/icon_52x52.png" rel="shortcut icon"/>
     <link href="./css/mui.css" rel="stylesheet" type="text/css" />
+    <link href="./css/materialize.min.css" rel="stylesheet" type="text/css" />
     <link href="./css/settings.css" rel="stylesheet" type="text/css" />
+
     <script src="./libs/mui.min.js"></script>
+    <script src="./libs/materialize.min.js"></script>
     <script src="./libs/jquery-3.3.1.min.js"></script>
   </head>
   <body>
@@ -30,18 +33,77 @@
         <div class="wit-left-half">
             <button id="wit-btn-send-msg-to-dev" class="mui-btn mui-btn--primary" >개발자에게 쪽지보내기</button>
         </div>
-        <div class="wit-right-half mui--text-right">
-            <button id="wit-btn-send-msg-to-dev" class="mui-btn mui-btn--danger">초기화</button>
+      </div>
+
+      <!-- Article read settings -->
+      <div class="mui-panel mui--text-left">
+        <!-- content -->
+        <div class="mui--text-subhead">게시글 읽기 설정</div>
+        <br>
+        <div class="mui-divider"></div>
+
+        <!-- Switch -->
+        <div class="switch">
+          <label>
+            <div class="left ext-setting-label">자동 추천</div>
+            <input id="setting-auto-vote-up" type="checkbox">
+            <span class="right lever"></span>
+          </label>
+        </div>
+        <br>
+
+      </div>
+
+      <!-- Article write settings -->
+      <div class="mui-panel mui--text-left">
+        <!-- content -->
+        <div class="mui--text-subhead">게시글 쓰기 설정</div>
+        <br>
+        <div class="mui-divider"></div>
+
+        <!-- Switch -->
+        <div class="switch">
+
+          <label>
+            <div class="left ext-setting-label">고정 짤 자동 삽입</div>
+            <input id="setting-article-header-import" type="checkbox">
+            <span class="right lever"></span>
+          </label>
+        </div>
+        <br>
+        <div id="article-header-import-path" class="row disabled-hidden">
+          <div class="left ext-setting-desc">고정짤 경로를 입력하세요. 웹에 저장되어 있지 않다면 하단 박스에 이미지를 드래그해 주시면 자동으로 업로드되어 처리됩니다.</div>
+          <br>
+          <br>
+          <div class="dropzone">
+              <div class="info"></div>
+          </div>
+          <div class="input-field col s6">
+            <input value="" id="setting-article-header-import-path" type="text" class="validate">
+            <label class="active" for="setting-article-header-import-path">고정짤 경로</label>
+          </div>
         </div>
       </div>
-      <br>
-      <br>
+
     </div>
+
+    <div class="mui-panel mui--text-left">
+      <!-- content -->
+      <div class="wit-left-half">
+          <button id="ext-setting-btn-apply" class="mui-btn mui-btn--primary" >적용</button>
+      </div>
+      <div class="wit-right-half mui--text-right">
+          <button id="ext-setting-btn-reset" class="mui-btn mui-btn--danger">초기화</button>
+      </div>
+    </div>
+      
     <footer>
       <div class="mui-container mui--text-center">
         Made by 코끼리는뿌우@witland.xyz
       </div>
     </footer>
     <script src="./js/settings.js"></script>
+    <script src="./libs/imgur.js"></script>
+    <script src="./libs/upload.js"></script>
   </body>
 </html>
