@@ -47,14 +47,32 @@ $(document).ready(() => {
   // oEditors.getById["wr_content"].exec("LOAD_CONTENTS_FIELD");
 
   // oEditors.getById["wr_content"].getIR(); // get contents from smarteditor
-  const imgSrc = "https://i.imgur.com/D9xetRX.png";
-  
-  const imgTagBlock = '`<img src="' + imgSrc + '">`';
-  // automatically paste 짤
-  $('body').append(` \
-    <script> \
-      $('#wr_content').text(${imgTagBlock}); \
-      oEditors.getById["wr_content"].exec("LOAD_CONTENTS_FIELD"); \
-    </script> \
-  `);
+
+  function readConfig(item) {
+    return new Promise(function (resolve, reject) {
+      chrome.storage.sync.get([item], function(result) {
+        console.log('readConfig>> ', result);
+        resolve(result[item]);
+      });
+    });
+  }
+
+  readConfig('setting-article-header-import')
+    .then(function(result) {
+      if (result) {
+        return readConfig('setting-article-header-import-path');
+      }
+    })
+    .then(function(result) {
+      if (result !== undefined ) {
+        const imgTagBlock = '`<img src="' + result + '">`';
+        // automatically paste 짤
+        $('body').append(` \
+          <script> \
+            $('#wr_content').text(${imgTagBlock}); \
+            oEditors.getById["wr_content"].exec("LOAD_CONTENTS_FIELD"); \
+          </script> \
+        `);
+      }
+    });
 });
