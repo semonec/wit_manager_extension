@@ -1,3 +1,12 @@
+function readConfig(item) {
+  return new Promise(function (resolve, reject) {
+    chrome.storage.sync.get([item], function(result) {
+      console.log('readConfig>> ', result);
+      resolve(result[item]);
+    });
+  });
+}
+
 $(document).ready(() => {
   const floatButton = $('<div></div>')
     .addClass('ext-floating')
@@ -42,4 +51,11 @@ $(document).ready(() => {
   $('.ext-settings').click(() => {
     chrome.runtime.sendMessage({type: "OPEN_OPTIONS_BOARD"});
   });
+
+  readConfig('setting-auto-vote-up')
+    .then(function (result) {
+      if (result) {
+        $('.print-hide.view-good-box').find('.view-good').find('a').get(0).click();
+      }
+    });
 });
